@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Embsys Brand Colors -->
+    <color name="purple_200">#B794F6</color>
+    <color name="purple_500">#7C3AED</color>
+    <color name="purple_700">#5B21B6</color>
+    <color name="teal_200">#B794F6</color>
+    <color name="teal_700">#5B21B6</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="GRAY">#ff808080</color>
+</resources>
