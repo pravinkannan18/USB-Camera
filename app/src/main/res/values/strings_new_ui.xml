@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Resolution Options -->
+    <string-array name="resolution_options">
+        <item>3840 x 2160 (4K)</item>
+        <item>2560 x 1440 (2K)</item>
+        <item>1920 x 1080 (Full HD)</item>
+        <item>1280 x 720 (HD)</item>
+        <item>640 x 480 (VGA)</item>
+    </string-array>
+
+    <!-- New UI Strings -->
+    <string name="app_name_embsys">Embsys Intelligence</string>
+    <string name="home_dashboard_title">Embsys Intelligence</string>
+    <string name="home_dashboard_subtitle">Embedded System Monitoring Suite</string>
+    <string name="card_live_streaming">Live Streaming</string>
+    <string name="card_live_streaming_desc">View camera feed\nwith real-time data</string>
+    <string name="card_image_capture">Image Capture</string>
+    <string name="card_image_capture_desc">Capture images\nwith weight data</string>
+    <string name="card_video_management">Video Management</string>
+    <string name="card_video_management_desc">View and manage\nrecorded videos</string>
+    <string name="card_settings">Settings</string>
+    <string name="card_settings_desc">Configure devices\nand preferences</string>
+    
+    <string name="live_streaming_title">Live Streaming</string>
+    <string name="pledge_id_label">Pledge ID:</string>
+    <string name="pledge_id_hint">Enter Pledge ID</string>
+    <string name="remote_saved_status">Remote saved (id=%1$d)</string>
+    <string name="tab_live_scale">Live Scale</string>
+    <string name="gross_weight_label">GROSS WEIGHT</string>
+    <string name="weight_stable">Stable</string>
+    <string name="weight_unstable">Unstable</string>
+    <string name="btn_capture_label">IMAGE &amp; WEIGHT CAPTURE</string>
+    <string name="no_camera_connected">No USB Camera Connected</string>
+    <string name="connect_camera_message">Please connect a USB camera\nto start live streaming</string>
+    
+    <string name="video_management_title">Video Management</string>
+    <string name="empty_videos_title">No Videos Yet</string>
+    <string name="empty_videos_message">Start recording to see your videos here</string>
+    <string name="filter_all">All</string>
+    <string name="filter_today">Today</string>
+    <string name="filter_week">This Week</string>
+    <string name="filter_month">This Month</string>
+    
+    <string name="settings_title">Settings</string>
+    <string name="section_device_settings">DEVICE SETTINGS</string>
+    <string name="section_weight_calibration">WEIGHT SENSOR CALIBRATION</string>
+    <string name="section_app_settings">APP SETTINGS</string>
+    <string name="setting_usb_camera">USB Camera</string>
+    <string name="setting_resolution">Resolution</string>
+    <string name="setting_framerate">Frame Rate</string>
+    <string name="setting_zero_calibration">Zero Calibration</string>
+    <string name="setting_calibrate_weight">Calibrate with Known Weight</string>
+    <string name="setting_offset_adjustment">Offset Adjustment</string>
+    <string name="setting_dark_theme">Dark Theme</string>
+    <string name="setting_auto_save">Auto-Save Captures</string>
+    <string name="setting_notifications">Notification Alerts</string>
+    <string name="setting_storage_location">Storage Location</string>
+    
+    <string name="btn_zero">Zero</string>
+    <string name="btn_calibrate">Calibrate</string>
+    <string name="btn_change">Change</string>
+    <string name="btn_play">Play</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_delete">Delete</string>
+    
+    <string name="status_usb_connected">USB Camera: Connected</string>
+    <string name="status_usb_disconnected">USB Camera: Not Connected</string>
+    <string name="status_weight_active">Weight Sensor: Active</string>
+    <string name="status_weight_inactive">Weight Sensor: Inactive</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_live_streaming">Live Streaming</string>
+    <string name="nav_video_management">Videos</string>
+    <string name="nav_settings">Settings</string>
+    
+    <!-- Home Screen -->
+    <string name="welcome_title">Welcome to Embsys Intelligence</string>
+    <string name="welcome_subtitle">Advanced USB Camera Monitoring System</string>
+    <string name="quick_stats">Quick Stats</string>
+    <string name="total_videos">Total Videos</string>
+    <string name="total_duration">Total Duration</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="start_recording">Start Recording</string>
+    <string name="start_recording_desc">Begin live camera streaming</string>
+    <string name="view_recordings">View Recordings</string>
+    <string name="view_recordings_desc">Browse saved videos</string>
+    <string name="settings_desc">Configure app preferences</string>
+    
+    <!-- Video Management Screen -->
+    <string name="search_videos">Search videos...</string>
+    <string name="recent_recordings">Recent Recordings</string>
+    <string name="no_recordings">No Recordings Yet</string>
+    <string name="no_recordings_desc">Start recording to see your videos here</string>
+    
+    <!-- Settings Screen -->
+    <string name="camera_settings">Camera Settings</string>
+    <string name="resolution">Resolution</string>
+    <string name="frame_rate">Frame Rate</string>
+    <string name="storage_settings">Storage Settings</string>
+    <string name="storage_location">Storage Location</string>
+    <string name="change">Change</string>
+    <string name="storage_usage">Storage Usage</string>
+    <string name="app_settings">App Settings</string>
+    <string name="auto_save">Auto Save</string>
+    <string name="auto_save_desc">Automatically save recordings</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_desc">Enable recording notifications</string>
+    <string name="about">About</string>
+    <string name="version">Version 1.0.0</string>
+    <string name="copyright">© 2025 Embsys Intelligence. All rights reserved.</string>
+</resources>

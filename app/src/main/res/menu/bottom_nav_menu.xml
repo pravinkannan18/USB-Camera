@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="@string/nav_home" />
+    
+    <item
+        android:id="@+id/nav_live_streaming"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/nav_live_streaming" />
+    
+    <item
+        android:id="@+id/nav_video_management"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="@string/nav_video_management" />
+    
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/nav_settings" />
+</menu>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- New UI Design Colors -->
+    <color name="embsys_primary_blue">#1E88E5</color>
+    <color name="embsys_secondary_blue">#0D47A1</color>
+    <color name="embsys_accent_blue">#42A5F5</color>
+    <color name="embsys_white">#FFFFFF</color>
+    <color name="embsys_bg_light_grey">#F2F4F7</color>
+    <color name="embsys_text_dark">#0A0A0A</color>
+    <color name="embsys_text_medium">#4A4A4A</color>
+    <color name="embsys_text_light">#CCCCCC</color>
+    <color name="embsys_success_green">#4CAF50</color>
+    <color name="embsys_error_red">#F44336</color>
+    <color name="embsys_info_light_blue">#E3F2FD</color>
+    <color name="embsys_divider">#E0E0E0</color>
+    <color name="embsys_overlay">#80000000</color>
+</resources>

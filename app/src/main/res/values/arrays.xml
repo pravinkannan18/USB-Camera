@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="resolutions">
+        <item>3840 x 2160 (4K)</item>
+        <item>2560 x 1440 (2K)</item>
+        <item>1920 x 1080 (Full HD)</item>
+        <item>1280 x 720 (HD)</item>
+        <item>640 x 480 (VGA)</item>
+    </string-array>
+    
+    <string-array name="frame_rates">
+        <item>60 FPS</item>
+        <item>30 FPS</item>
+        <item>24 FPS</item>
+        <item>15 FPS</item>
+    </string-array>
+</resources>
