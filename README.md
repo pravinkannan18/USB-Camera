@@ -1,11 +1,7 @@
-![Embsys Intelligence Logo](images/embsys%20logo.png)
-
-
-# Embsys Intelligence USB Camera Engine&ensp;[![](https://jitpack.io/v/jiangdongguo/AndroidUSBCamera.svg)](https://jitpack.io/#jiangdongguo/AndroidUSBCamera) [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
+# 🎥 Embsys Intelligence
+## USB Camera Engine&ensp;[![](https://jitpack.io/v/jiangdongguo/AndroidUSBCamera.svg)](https://jitpack.io/#jiangdongguo/AndroidUSBCamera) [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
 
 &emsp;Flexible and useful UVC camera engine on Android platform, you can use it to simply  open your uvc camera (supporting multi-road cameras) without  any system permissions . The only thing you should do is that confirming your Android device must support OTG function. So, welcom to use **Embsys Intelligence Camera Engine** and welcom to **star** & **fork** & **issues**!
-
-![multi-road camera](images/embsys%20logo.png)
 
 &emsp;[@ Demo Video](https://embsys.com/demos)
 
@@ -301,9 +297,9 @@ dependencies {
 Demo
 -------
 
-![QR Code](images/embsys%20logo.png)
+&emsp;**Download Embsys Intelligence Camera App**
 
-&emsp;[Download Embsys Intelligence Camera App](https://github.com/pravinkannan18/USB-Camera/releases)
+&emsp;[Latest Release](https://github.com/pravinkannan18/USB-Camera/releases)
 
 
 Version

@@ -35,6 +35,9 @@
 #include <config.h>
 #endif
 
+#include <string.h>
+#include <stdlib.h>
+
 #ifdef STDC_HEADERS
 # include <stddef.h>
 # include <stdlib.h>
@@ -45,7 +48,7 @@
 //#  define strchr index
 //#  define strrchr rindex
 //# endif
-char   *strchr(), *strrchr();
+// char   *strchr(), *strrchr(); // Removed - conflicts with NDK headers
 //# ifndef HAVE_MEMCPY
 //#  define memcpy(d, s, n) bcopy ((s), (d), (n))
 //# endif

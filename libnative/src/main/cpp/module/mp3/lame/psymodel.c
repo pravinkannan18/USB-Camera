@@ -144,6 +144,8 @@ blocktype_d[2]        block type to use for previous granule
 # include <config.h>
 #endif
 
+#include <string.h>
+#include <stdlib.h>
 #include <android/legacy_stdlib_inlines.h>
 #include "lame.h"
 #include "machine.h"
