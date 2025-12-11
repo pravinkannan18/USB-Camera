@@ -82,6 +82,9 @@ class DemoFragment : CameraFragment(), View.OnClickListener, CaptureMediaView.On
     private var mRecSeconds = 0
     private var mRecMinute = 0
     private var mRecHours = 0
+    private var isProcessingCapture: Boolean = false
+    private var lastCaptureClickTime: Long = 0
+    private val CAPTURE_CLICK_DEBOUNCE_DELAY = 1000L // 1 second debounce
 
     private val mCameraModeTabMap = mapOf(
         CaptureMediaView.CaptureMode.MODE_CAPTURE_PIC to R.id.takePictureModeTv,
@@ -325,6 +328,19 @@ class DemoFragment : CameraFragment(), View.OnClickListener, CaptureMediaView.On
             ToastUtils.show("camera not worked!")
             return
         }
+        
+        // Debounce rapid clicks
+        val currentTime = System.currentTimeMillis()
+        if (currentTime - lastCaptureClickTime < CAPTURE_CLICK_DEBOUNCE_DELAY && !isCapturingVideoOrAudio) {
+            return // Ignore rapid clicks within debounce period
+        }
+        lastCaptureClickTime = currentTime
+        
+        // Prevent multiple simultaneous capture operations
+        if (isProcessingCapture && !isCapturingVideoOrAudio) {
+            return
+        }
+        
         when (mode) {
             CaptureMediaView.CaptureMode.MODE_CAPTURE_PIC -> {
                 captureImage()
@@ -418,24 +434,51 @@ class DemoFragment : CameraFragment(), View.OnClickListener, CaptureMediaView.On
     }
 
     private fun captureImage() {
-        captureImage(object : ICaptureCallBack {
-            override fun onBegin() {
-                mTakePictureTipView.show("", 100)
-                mViewBinding.albumPreviewIv.showImageLoadProgress()
-                mViewBinding.albumPreviewIv.setNewImageFlag(true)
-            }
+        if (isProcessingCapture) {
+            return
+        }
+        isProcessingCapture = true
+        try {
+            captureImage(object : ICaptureCallBack {
+                override fun onBegin() {
+                    try {
+                        mTakePictureTipView.show("", 100)
+                        mViewBinding.albumPreviewIv.showImageLoadProgress()
+                        mViewBinding.albumPreviewIv.setNewImageFlag(true)
+                    } catch (e: Exception) {
+                        Logger.e(TAG, "captureImage onBegin error: ${e.message}", e)
+                        isProcessingCapture = false
+                    }
+                }
 
-            override fun onError(error: String?) {
-                ToastUtils.show(error ?: "未知异常")
-                mViewBinding.albumPreviewIv.cancelAnimation()
-                mViewBinding.albumPreviewIv.setNewImageFlag(false)
-            }
+                override fun onError(error: String?) {
+                    try {
+                        ToastUtils.show(error ?: "未知异常")
+                        mViewBinding.albumPreviewIv.cancelAnimation()
+                        mViewBinding.albumPreviewIv.setNewImageFlag(false)
+                    } catch (e: Exception) {
+                        Logger.e(TAG, "captureImage onError error: ${e.message}", e)
+                    } finally {
+                        isProcessingCapture = false
+                    }
+                }
 
-            override fun onComplete(path: String?) {
-                showRecentMedia(true)
-                mViewBinding.albumPreviewIv.setNewImageFlag(false)
-            }
-        })
+                override fun onComplete(path: String?) {
+                    try {
+                        showRecentMedia(true)
+                        mViewBinding.albumPreviewIv.setNewImageFlag(false)
+                    } catch (e: Exception) {
+                        Logger.e(TAG, "captureImage onComplete error: ${e.message}", e)
+                    } finally {
+                        isProcessingCapture = false
+                    }
+                }
+            })
+        } catch (e: Exception) {
+            Logger.e(TAG, "captureImage error: ${e.message}", e)
+            isProcessingCapture = false
+            ToastUtils.show("Capture failed: ${e.message}")
+        }
     }
 
     override fun onDestroyView() {
